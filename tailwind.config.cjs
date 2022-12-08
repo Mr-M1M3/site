@@ -6,9 +6,10 @@ const config = {
       colors: {
         'theme-primary': '#70EE9C',
         'theme-gray': '#323232',
+        'theme-black': '#1E1E1E',
         'theme-white': 'rgba(255, 255, 255, 0.8)'
       },
-      fonts: {
+      fontFamily: {
         'theme-rubik': ['Rubik', 'sans-serif'],
         'theme-inter': ['Inter', 'sans-serif'],
         'theme-monda': ['Monda', 'sans-serif']
