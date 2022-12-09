@@ -9,7 +9,6 @@
   },
   "devDependencies": {
     "@iconify/svelte": "^3.0.1",
-    "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.14",
