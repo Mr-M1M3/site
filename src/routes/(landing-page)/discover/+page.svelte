@@ -2,6 +2,9 @@
     import Heading from "./components/Heading.svelte";
     import Reason from "./components/Reason.svelte";
     import reasons from './data/reasons.json';
+    import Project from "./components/Project.svelte";
+    import projects from "./data/projects.json";
+    import { time_ranges_to_array } from "svelte/internal";
 </script>
 <header class="hero flex flex-col justify-between">
     <div class="texts  text-theme-primary font-bold font-theme-rubik text-5xl m-4 grid grid-cols-1 grid-rows-3">
@@ -18,9 +21,15 @@
 <main>
     <p class="mx-2 my-6 text-center text-white font-inter tracking-wide leading-relaxed"><span class="text-theme-primary font-bold">OBBOY</span> is a community where we build open source projects.</p>
     <Heading title="why are we doing this?" right/>
-    <section class="reasons my-8">
-        {#each reasons as {reason} (reason.id)}
+    <section class="reasons">
+        {#each reasons as {reason} (reason)}
             <Reason {reason}/>
+        {/each}
+    </section>
+    <Heading title="Projects We've done so far" left/>
+    <section class="projects">
+        {#each projects as {title, desc, href} (title)}
+            <Project {title} {desc} {href}/>
         {/each}
     </section>
 </main>
@@ -33,8 +42,8 @@
     .stroked{
         -webkit-text-stroke: 2px theme(colors[theme-primary]);
     }
-    .reasons{
-        @apply grid gap-2;
+    .reasons, .projects{
+        @apply grid gap-2 my-8;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 </style>
