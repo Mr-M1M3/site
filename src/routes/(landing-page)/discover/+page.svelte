@@ -4,7 +4,7 @@
     import reasons from './data/reasons.json';
     import Project from "./components/Project.svelte";
     import projects from "./data/projects.json";
-    import { time_ranges_to_array } from "svelte/internal";
+    import Form from "./components/Form.svelte";
 </script>
 <header class="hero flex flex-col justify-between">
     <div class="texts  text-theme-primary font-bold font-theme-rubik text-5xl m-4 grid grid-cols-1 grid-rows-3">
@@ -32,6 +32,8 @@
             <Project {title} {desc} {href}/>
         {/each}
     </section>
+    <Heading title="Got Inspired? Join US" right/>
+    <Form/>
 </main>
 
 

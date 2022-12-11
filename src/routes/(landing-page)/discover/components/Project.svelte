@@ -3,7 +3,7 @@
     export let desc = "";
     export let rotate = "+";
     export let href = "";
-    import Icon from "@iconify/svelte/dist/Icon.svelte";
+    import Icon from "@iconify/svelte";
     import {goto} from "$app/navigation";
     async function move(e){
         if(href){
